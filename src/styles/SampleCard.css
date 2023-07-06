@@ -2,17 +2,16 @@
 .samples{
     display: flex;
     justify-content: space-around;
-    align-items: end;
+    align-items: flex-end;
     
 }
 
 .card{
+    background-color: white;
+    flex-direction: row;
+    gap: -10px;
     width: 320px;
     height: 500px;
-    background-image: url(.././Images/sampleBackground.webp);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     border: 5px solid deeppink;
     border-radius: 10px;
     overflow: hidden;
@@ -46,20 +45,21 @@
 
 .samples .card .ganeshji{
     position: absolute;
-    top: 150px;
-    left: 100px;
+    top: 0px;
+    left: 0px;
     opacity: 0;
-    animation: ganesha 12s linear 2s 1 forwards;
+    z-index: 1;
+    animation: ganesha 12s linear 3s 1 forwards;
 }
 
 @keyframes ganesha {
-    0% { transform: scale(0); opacity: 0; }
-    4% { transform: scale(0.25); opacity: 1;}
-    8% { transform: scale(0.5); opacity: 1;}
-    12% { transform: scale(0.75); opacity: 1;}
-    17% { transform: scale(1); opacity: 1;}
-    95% { transform: scale(1); opacity: 1;}
-    100% { transform:scale(1); opacity: 0; }
+    0% { transform: scale(0) translate(0px, 0px); opacity: 0; }
+    4% { transform: scale(0.25) translate(25px, 35px); opacity: 1;}
+    8% { transform: scale(0.5) translate(50px, 70px); opacity: 1;}
+    12% { transform: scale(0.75) translate(75px, 105px); opacity: 1;}
+    17% { transform: scale(1) translate(100px, 150px); opacity: 1;}
+    95% { transform: scale(1) translate(100px, 150px); opacity: 1;}
+    100% { transform:scale(1) translate(100px, 150px); opacity: 1; }
 }
 
 .samples .card .text{
@@ -82,75 +82,10 @@
     18% { transform: scaleX(0.75); opacity: 1;}
     25% { transform:scaleX(1); opacity: 1; }
     95% { transform: scale(1); opacity: 1;}
-    100% { transform:scaleX(1); opacity: 0; }
+    100% { transform:scaleX(1); opacity: 1; }
 }
 
-.samples .card .text::before {
-    content: "";
-    position: absolute;
-    top: -5px;
-    left: 0;
-    width: 10px;
-    height: 10px;
-    background-color: goldenrod;
-    opacity: 0;
-    border-radius: 50%;
-    animation: spark 12s linear 7s 1 infinite;
-  }
   
-  @keyframes spark {
-    0% { opacity: 0; }
-    25% { opacity: 1; }
-    50% { opacity: 0; }
-    75% { opacity: 1; }
-    100% { opacity: 0; }
-  }
-
-  .card::before {
-    /* New styles for confetti */
-    content: "";
-    position: absolute;
-    top: 100px;
-    left: 200px;
-    width: 100%;
-    height: 100%;
-  }
-
-  .confetti {
-    /* New styles for confetti particles */
-    position: absolute;
-    top: 280px;
-    left: 350px;
-    width: 8px;
-    height: 8px;
-    background-color: deeppink;
-    opacity: 0;
-    border-radius: 50%;
-    animation: confetti 12s linear 7s 1;
-  }
-
-  @keyframes confetti {
-    /* New keyframes for confetti animation */
-    0% {
-      transform: translate(-50%, -50%) rotate(0deg);
-      opacity: 0;
-    }
-    25% {
-      opacity: 1;
-    }
-    50% {
-      transform: translate(-50%, 100%) rotate(360deg);
-      opacity: 0;
-    }
-    75% {
-        opacity: 1;
-      }
-    100% {
-        transform: translate(-50%, 100%) rotate(360deg);
-        opacity: 0;
-      }
-  }
-
   .Mantra img{
     width: 50%;
     height: 50px;
@@ -169,8 +104,9 @@
     60% { opacity: 0.75; transform: translateY(225px) scale(0.75);}
     80% { opacity: 1; transform: translateY(300px) scale(1); }
     95% { opacity: 1; transform: translateY(300px) scale(1); }
-    100% { opacity: 0; transform: translateY(300px) scale(1); }
+    100% { opacity: 1; transform: translateY(300px) scale(1); }
 }
+
 
 
 .couple{
@@ -280,6 +216,57 @@
     25% { transform: translateX(30px) scaleX(1); opacity: 1; }
     95% { transform: translateX(40px) scale(1); opacity: 1;}
     100% { transform: translateX(50px) scaleX(1); opacity: 1; }
+}
+
+.card .page1{
+    width: 320px;
+    height: 500px;
+    background-image: url(.././Images/sampleBackground.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    animation: slideOut 2s linear 13s 1 forwards;
+}
+
+
+@keyframes slideOut {
+    0% {
+        transform: translatex(0px);
+    }
+
+    100% {
+        transform: translateX(-110%);
+    }
+}
+
+
+.page2{
+    width: 320px;
+    height: 500px;
+    background-image: url(.././Images/sampleBackground.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 0;
+    top: 0px;
+    left: 0px;
+    animation: slideIn 2s linear 13s 1 forwards;
+}
+
+
+@keyframes slideIn {
+    0% {
+        transform: translatex(100%);
+    }
+
+    100% {
+        transform: translateX(-2%);
+    }
 }
 
 

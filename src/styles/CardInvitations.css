@@ -1,60 +1,55 @@
-
-
-h1{
-    margin: 0px 120px 50px;
-    font-family: serif;
-}
-
-.cards{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20%;
-    grid-template-rows: 400px;
+.carousel-container {
+    max-width: 80%;
+    height: 500px;
+    margin: auto auto;
+  }
+  
+  .carousel-item {
+    display: flex;
     justify-content: center;
-    gap: 30px;
-    margin-left: 15px;
-}
-
-.invitation{
+    align-items: center;
     height: 400px;
+    margin-top: 50px;
+    margin-left: 10%;
+  }
+  
+  .carousel-item img {
+    max-width: 100%;
+    max-height: 100%;
+    /* object-fit: cover; */
     border-radius: 10px;
-    box-shadow: 2px 2px 5px red;
-}
+    box-shadow: 5px 5px 10px red;
+  }
 
-.invitation:hover{
-    transform: translateY(-7px);
+  .carousel-item img:hover{
+    transform: translateY(-5px);
     transition-duration: 400ms;
-}
+  }
 
-.cards h3{
-    text-decoration: none;
-    text-align: center;
-    color: black;
-    margin-top: 10px;
-}
-
-.card1{
-    grid-column: 1/2;
-}
-
-.card2{
-    grid-column: 2/3;
-}
-
-.card3{
-    grid-column: 3/4;
-}
-
-.card4{
-    grid-column: 4/5;
-}
+  .custom-prev-arrow {
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .custom-next-arrow {
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    right: -60px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
 
 
-.button{
+  .button{
     text-align: center;
     background-color: blanchedalmond;
     color: chocolate;
-    margin-top: 20px;
+    margin-top: 0px;
     margin-bottom: 90px;
     border-radius: 10px;
     border: 2px solid chocolate;
@@ -65,7 +60,7 @@ h1{
     font-size: 18px;
     font-family: 'Times New Roman', Times, serif;
     position: relative;
-    top: 50px;
+    top: 0px;
     left: 560px;
 }
 
@@ -73,3 +68,4 @@ h1{
 .button:hover{
     background-color:  #ffd699;
 }
+  
