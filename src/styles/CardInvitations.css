@@ -1,0 +1,75 @@
+
+
+h1{
+    margin: 0px 120px 50px;
+    font-family: serif;
+}
+
+.cards{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-rows: 400px;
+    justify-content: center;
+    gap: 30px;
+    margin-left: 15px;
+}
+
+.invitation{
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px red;
+}
+
+.invitation:hover{
+    transform: translateY(-7px);
+    transition-duration: 400ms;
+}
+
+.cards h3{
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    margin-top: 10px;
+}
+
+.card1{
+    grid-column: 1/2;
+}
+
+.card2{
+    grid-column: 2/3;
+}
+
+.card3{
+    grid-column: 3/4;
+}
+
+.card4{
+    grid-column: 4/5;
+}
+
+
+.button{
+    text-align: center;
+    background-color: blanchedalmond;
+    color: chocolate;
+    margin-top: 20px;
+    margin-bottom: 90px;
+    border-radius: 10px;
+    border: 2px solid chocolate;
+    cursor: pointer;
+    height: 56px;
+    width: 280px;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    top: 50px;
+    left: 560px;
+}
+
+
+.button:hover{
+    background-color:  #ffd699;
+}

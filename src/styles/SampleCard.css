@@ -1,0 +1,285 @@
+
+.samples{
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    
+}
+
+.card{
+    width: 320px;
+    height: 500px;
+    background-image: url(.././Images/sampleBackground.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px solid deeppink;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 3px 3px 10px black;
+}
+
+.video{
+    border: 5px solid deeppink;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 3px 3px 10px black;
+}
+
+.card .flowers{
+    position: relative;
+    top: -240px;
+    left: -15px;
+    opacity: 0;
+    transform: rotate(60deg);
+    animation: flowers 2s linear 1s infinite;
+}
+
+@keyframes flowers {
+    0% { transform: rotate(60deg); opacity: 0; }
+    25% { transform: rotate(62deg); opacity: 1; }
+    50% { transform: rotate(60deg); opacity: 1; }
+    75% { transform: rotate(62deg); opacity: 1; }
+    100% { transform: rotate(60deg); opacity: 1; }
+}
+
+.samples .card .ganeshji{
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    opacity: 0;
+    animation: ganesha 12s linear 2s 1 forwards;
+}
+
+@keyframes ganesha {
+    0% { transform: scale(0); opacity: 0; }
+    4% { transform: scale(0.25); opacity: 1;}
+    8% { transform: scale(0.5); opacity: 1;}
+    12% { transform: scale(0.75); opacity: 1;}
+    17% { transform: scale(1); opacity: 1;}
+    95% { transform: scale(1); opacity: 1;}
+    100% { transform:scale(1); opacity: 0; }
+}
+
+.samples .card .text{
+    position: absolute;
+    top: 260px;
+    left: 60px;
+    font-family: fantasy;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0;
+    animation: text 10s linear 4s  1 forwards;
+}
+
+@keyframes text {
+    0% { transform: scaleX(0);
+            opacity: 0;
+    }
+    6% { transform: scaleX(0.25); opacity: 1;}
+    12% { transform: scaleX(0.5); opacity: 1;}
+    18% { transform: scaleX(0.75); opacity: 1;}
+    25% { transform:scaleX(1); opacity: 1; }
+    95% { transform: scale(1); opacity: 1;}
+    100% { transform:scaleX(1); opacity: 0; }
+}
+
+.samples .card .text::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background-color: goldenrod;
+    opacity: 0;
+    border-radius: 50%;
+    animation: spark 12s linear 7s 1 infinite;
+  }
+  
+  @keyframes spark {
+    0% { opacity: 0; }
+    25% { opacity: 1; }
+    50% { opacity: 0; }
+    75% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  .card::before {
+    /* New styles for confetti */
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .confetti {
+    /* New styles for confetti particles */
+    position: absolute;
+    top: 280px;
+    left: 350px;
+    width: 8px;
+    height: 8px;
+    background-color: deeppink;
+    opacity: 0;
+    border-radius: 50%;
+    animation: confetti 12s linear 7s 1;
+  }
+
+  @keyframes confetti {
+    /* New keyframes for confetti animation */
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+      opacity: 0;
+    }
+    25% {
+      opacity: 1;
+    }
+    50% {
+      transform: translate(-50%, 100%) rotate(360deg);
+      opacity: 0;
+    }
+    75% {
+        opacity: 1;
+      }
+    100% {
+        transform: translate(-50%, 100%) rotate(360deg);
+        opacity: 0;
+      }
+  }
+
+  .Mantra img{
+    width: 50%;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    left: 72px;
+    opacity: 0;
+    animation: mantra 5s linear 8s 1 forwards;
+  }
+
+
+@keyframes mantra {
+    0% { opacity: 0; transform: translateY(0px) scale(0); }
+    20% { opacity: 0.25; transform: translateY(75px) scale(0.25);}
+    40% { opacity: 0.5; transform: translateY(150px) scale(0.5);}
+    60% { opacity: 0.75; transform: translateY(225px) scale(0.75);}
+    80% { opacity: 1; transform: translateY(300px) scale(1); }
+    95% { opacity: 1; transform: translateY(300px) scale(1); }
+    100% { opacity: 0; transform: translateY(300px) scale(1); }
+}
+
+
+.couple{
+    position: absolute;
+    top: 0px;
+    left: 90px;
+    opacity: 0;
+    animation: couple 10s linear 14s 1 forwards;
+  }
+
+
+@keyframes couple {
+    0% { opacity: 0; transform: translateY(200px) scale(0); }
+    20% { opacity: 0.25; transform: translateY(75px) scale(0.25);}
+    40% { opacity: 0.5; transform: translateY(100px) scale(0.5);}
+    60% { opacity: 0.75; transform: translateY(125px) scale(0.75);}
+    80% { opacity: 1; transform: translateY(150px) scale(1); }
+    95% { opacity: 1; transform: translateY(150px) scale(1); }
+    100% { opacity: 1; transform: translateY(150px) scale(1); }
+}
+
+
+.heads{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-left: -100px;
+    font-weight: bold;
+}
+
+
+.text2{
+    width: 68%;
+    text-align: center;
+    position: absolute;
+    top: 260px;
+    left: 50px;
+    font-family: cursive;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0;
+    animation: text2 8s linear 20s  1 forwards;
+}
+
+@keyframes text2 {
+    0% { transform: scaleX(0);
+            opacity: 0;
+    }
+    6% { transform: scaleX(0.25); opacity: 1;}
+    12% { transform: scaleX(0.5); opacity: 1;}
+    18% { transform: scaleX(0.75); opacity: 1;}
+    25% { transform:scaleX(1); opacity: 1; }
+    95% { transform: scale(1); opacity: 1;}
+    100% { transform:scaleX(1); opacity: 1; }
+}
+
+
+.text3{
+    width: 68%;
+    text-align: center;
+    position: absolute;
+    top: 360px;
+    left: 0px;
+    font-family: fantasy;
+    font-style: italic;
+    font-size: 28px;
+    font-weight: bold;
+    opacity: 0;
+    animation: text3 8s linear 20s  1 forwards;
+}
+
+@keyframes text3 {
+    0% { transform: scaleX(0);
+            opacity: 0;
+    }
+    6% { transform: translateX(0px) scaleX(0.25); opacity: 1;}
+    12% { transform:translateX(10px) scaleX(0.5); opacity: 1;}
+    18% { transform:translateX(20px) scaleX(0.75); opacity: 1;}
+    25% { transform: translateX(30px) scaleX(1); opacity: 1; }
+    95% { transform: translateX(40px) scale(1); opacity: 1;}
+    100% { transform: translateX(50px) scaleX(1); opacity: 0; }
+}
+
+
+.text4{
+    width: 68%;
+    text-align: center;
+    position: absolute;
+    top: 360px;
+    left: 0px;
+    font-family: fantasy;
+    font-style: italic;
+    font-size: 28px;
+    font-weight: bold;
+    opacity: 0;
+    animation: text4 4s linear 28s  1 forwards;
+}
+
+@keyframes text4 {
+    0% { transform: scaleX(0);
+            opacity: 0;
+    }
+    6% { transform: translateX(0px) scaleX(0.25); opacity: 1;}
+    12% { transform:translateX(10px) scaleX(0.5); opacity: 1;}
+    18% { transform:translateX(20px) scaleX(0.75); opacity: 1;}
+    25% { transform: translateX(30px) scaleX(1); opacity: 1; }
+    95% { transform: translateX(40px) scale(1); opacity: 1;}
+    100% { transform: translateX(50px) scaleX(1); opacity: 1; }
+}
+
+
