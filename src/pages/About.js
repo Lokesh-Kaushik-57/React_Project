@@ -1,10 +1,12 @@
 import React from "react";
-import Layout from "../Components/Layout/Layout";
 import { Box, Typography } from "@mui/material";
+import Background from '../Images/Background.jpg'
+import '../styles/HomeStyle.css'
 
 const About = () => {
   return (
-    <Layout>
+    <>
+    <div className="home" style={{backgroundImage: `url(${Background})`}}>
       <Box sx={{
         my:15,
         textAlign: 'center',
@@ -39,7 +41,8 @@ const About = () => {
           qui vel, nihil consectetur quis cumque.
         </p>
       </Box>
-    </Layout>
+        </div>
+    </>
   );
 };
 

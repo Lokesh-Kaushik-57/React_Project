@@ -1,11 +1,15 @@
 import React from 'react'
-import Layout from '../Components/Layout/Layout'
+import Background from '../Images/Background.jpg'
+import '../styles/HomeStyle.css'
+
 
 const Contact = () => {
   return (
-    <Layout>
+    <>
+      <div className='home' style={{backgroundImage: `url(${Background})`}}>
         <h1>Contact Us</h1>
-    </Layout>
+      </div>
+    </>
   )
 }
 

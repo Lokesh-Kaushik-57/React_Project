@@ -1,7 +1,24 @@
+.home2{
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 120vh;
+  position: sticky;
+  top: 0;
+}
+
 .carousel-container {
     max-width: 80%;
     height: 500px;
     margin: auto auto;
+  }
+
+  .headings h1{
+    position: relative;
+    bottom: 540px;
+    left: 39.5%;
+    font-size: 48px;
+    font-family: cursive;
+    text-shadow: 2px 2px 5px grey;
   }
   
   .carousel-item {
@@ -9,14 +26,13 @@
     justify-content: center;
     align-items: center;
     height: 400px;
-    margin-top: 50px;
-    margin-left: 10%;
+    margin-top: 200px;
+    margin-left: 15%;
   }
   
   .carousel-item img {
     max-width: 100%;
     max-height: 100%;
-    /* object-fit: cover; */
     border-radius: 10px;
     box-shadow: 5px 5px 10px red;
   }
@@ -29,7 +45,7 @@
   .custom-prev-arrow {
     font-size: 50px;
     position: absolute;
-    top: 50%;
+    top: 65%;
     left: -60px;
     transform: translateY(-50%);
     cursor: pointer;
@@ -38,7 +54,7 @@
   .custom-next-arrow {
     font-size: 50px;
     position: absolute;
-    top: 50%;
+    top: 65%;
     right: -60px;
     transform: translateY(-50%);
     cursor: pointer;
@@ -60,12 +76,32 @@
     font-size: 18px;
     font-family: 'Times New Roman', Times, serif;
     position: relative;
-    top: 0px;
-    left: 560px;
+    top: 20vh;
+    left: 39.7vw;
+    
 }
 
 
 .button:hover{
     background-color:  #ffd699;
 }
+
+/* .button{
+  animation: testN 10s linear 0s 1 forwards;
+}
+
+@keyframes testN {
+  0% {
+      transform: scale(0); opacity: 0;
+  }
+  25% {
+      transform: scale(0.25); opacity: 0.25;
+  }
+  50% {
+      transform: scale(0.5); opacity: 0.5;
+  }
+  100% {
+      transform: scale(1); opacity: 1;
+  }
+} */
   
